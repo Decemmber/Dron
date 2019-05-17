@@ -1,17 +1,360 @@
-
-
+$bold: "Montserrat Bold";
+$regular: "Montserrat Regular";
+$red: #ff343d;
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $regular;
+  font-size: 14px;
+  color: #92a1a5;
+  box-sizing: border-box;
+}
+
+/*header*/
+.header {
+  display: flex;
+  &__container {
+    height: 100vh;
+    width: 100%;
   }
-  
-  body {
-    font: 1.65rem/1.2 Circe, sans-serif;
-    font-weight: 300;
-    font-family: $georgia;
-    font-size: 15px; 
-    color: #858585;
+  &__info {
+    position: absolute;
+    z-index: 999;
+    top: 20px;
+    left: 40px;
+      ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        li {
+          margin-right: 20px;
+          #buy {
+            margin-left: 800px;
+            text-decoration: none;
+            color: #fff;
+            font-family: $bold;
+          }
+        }
+      }
+  }
+  &__left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 300px;
+    left: 40px;
+    width: 400px;
+    h3 {
+      font-family: $bold;
+      font-size: 50px;
+      color: #000;
+    }
+  }
+}
+
+.left,
+.right {
+  position: absolute;
+  height: 100vh;
+  width: 50%;
+}
+
+.left {
+  background: #eff2f6;
+}
+
+.right {
+  left: 50%;
+  background: $red;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.product {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fly 4s ease-in-out infinite;
+  img {
+    height: 305px;
+    width: 530px;
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translate(-50%, -46%);
   }
 
-  /*header*/
+  50% {
+    transform: translate(-50%, -54%);
+  }
+
+  100% {
+    transform: translate(-50%, -46%);
+  }
+}
+
+.about {
+  display: flex;
+  position: relative;
+  &__left {
+    transform: scaleX(0);
+    transform-origin: left;
+    img {
+      height: 415px;
+      width: 100%;
+      left: 0;
+      top: 0;
+    }
+    &_text {
+      top: 160px;
+      left: 130px;
+      position: absolute;
+      h3 {
+        font-family: $bold;
+        font-size: 50px;
+        color: #000;
+      }
+    }
+  }
+  &__right_img {
+    position: relative;
+    height: 415px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    background: url(/img/ways.png);
+    .img-overlay {
+      width: 40%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+  }
+  &__right_text {
+    position: absolute;
+    top: 160px;
+    left: 50px;
+    h3 {
+      font-family: $bold;
+      font-size: 50px;
+      color: #fff;
+    }
+  }
+}
+
+/*features*/
+.features {
+  color: #000;
+  font-family: $bold;
+  &__title {
+    margin-top: 100px;
+    margin-bottom: 90px;
+    text-align: center;
+    font-size: 38px;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__item {
+    height: 95px;
+    
+    text-align: center;
+    font-size: 20px;
+    p {
+      margin-top: 15px;
+      margin-bottom: 160px;
+    }
+  }
+}
+
+/*New generation of vision*/
+.newgen {
+  display: flex;
+  position: relative;
+  margin-top: 200px;
+  &__left img {
+    height: 415px;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+  &__right_img {
+    position: relative;
+    height: 415px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    /*transform: scaleX(0);
+    transform-origin: right;*/
+    background: url(/img/artdron1.png);
+    h3 span {
+      color: $red;
+    }
+    .button {
+      border-style: solid;
+      border-width: 2px;
+      border-color: rgb(59, 59, 59);
+      background-color: transparent;
+      border-radius: 35px;
+      position: absolute;
+      padding: 13px 15px;
+      margin-top: 25px;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      font-size: 11px;
+      font-family: $bold;
+      transition: 0.3s;
+      &:hover {
+        background-color: $red;
+        border-color: $red;
+      }
+    }
+  }
+}
+
+/*New generation of flying*/
+.newgenfly {
+  display: flex;
+  margin-top: 200px;
+  justify-content: space-around;
+  &__about {
+    h3 {
+      font-family: $bold;
+      font-size: 50px;
+      color: #000;
+      span {
+        color: $red;
+      }
+    }
+    .button {
+      border-style: solid;
+      border-width: 2px;
+      border-color: rgb(59, 59, 59);
+      background-color: transparent;
+      border-radius: 35px;
+      position: absolute;
+      padding: 13px 15px;
+      margin-top: 25px;
+      text-align: center;
+      text-decoration: none;
+      color: #000;
+      font-size: 11px;
+      font-family: $bold;
+      transition: 0.3s;
+      &:hover {
+        background-color: $red;
+        border-color: $red;
+        color: #fff;
+      }
+    }
+  }
+  &__dron {
+    width: 50%;
+    position: relative;
+    margin-left: 110px;
+    transform: translateY(-50%);
+    top: 100px;
+    animation: flytwo 4s ease-in-out infinite;
+    img {
+      height: 400px;
+      width: 100%;
+    
+    }
+  }
+  @keyframes flytwo {
+    0% {
+      transform: translateY(-46%);
+    }
+  
+    50% {
+      transform: translateY(-54%);
+    }
+  
+    100% {
+      transform: translateY(-46%);
+    }
+  }
+}
+
+/*Start your journey*/
+.journey {
+  background: url(/img/footerimg2.png);
+  width: 100%;
+  background-size: cover;
+  height: 100vh;
+  display:inline-block;
+    &__about {
+      text-align: center;
+      h3 {
+        margin-top: 450px;
+        font-size: 50px;
+        font-family: $bold;
+        color: #fff;
+        
+      }
+      .button {
+        margin-top: 100px;
+        display:inline-block;
+        border: none;
+        background-color: #fff;
+        border-radius: 35px;
+        color: #3e9f88;
+        padding: 13px 15px;
+        margin-top: 25px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 11px;
+        font-family: $bold;
+        transition: 0.1s;
+        &:hover {
+          padding: 14px 16px;
+        }
+    }
+}
+}
+
+/*footer*/
+.footer {
+  text-align: center;
+  margin: 120px 0;
+  p {
+    margin-top: 20px;
+  }
+}
+
+#toTop {
+  z-index: 999;
+  width: 40px;
+  height: 40px;
+  border: none;
+  font-size: 20px;
+  border-radius: 3px;
+  background: #fff;
+  text-align: center;
+  padding: 5px;
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  display: none;
+  color: $red;
+  cursor: pointer;
+}

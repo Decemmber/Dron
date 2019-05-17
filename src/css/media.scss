@@ -1,14 +1,106 @@
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
+$bold: "Montserrat Bold";
+$regular: "Montserrat Regular";
+$red: #ff343d;
 
+@media only screen and (min-width: 768px) and (max-width: 1210px) {
+  .header__container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .left,
+  .right {
+    position: absolute;
+    height: 400px;
+    width: 50%;
+  }
+
+  .circle {
+    height: 200px;
+    width: 200px;
+  }
+  .product {
+    img {
+      height: 200px;
+      width: 295px;
+    }
+  }
+
+  .header__info {
+    p {
+      font-size: 10px;
+    }
+    ul li #buy {
+      margin-left: 400px;
+    }
+  }
+
+  .header__left {
+    top: 200px;
+    left: 40px;
+    width: 280px;
+    h3 {
+      font-family: $bold;
+      font-size: 40px;
+      color: #000;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .img-overlay {
+    display: none;
+  }
+
+  .about__right_text {
+    .button {
+      margin-top: 15px;
+    }
+  }
+
+  .newgenfly {
+    margin-top: 100px;
+    margin-left: 20px;
+
+    &__dron {
+      width: 50%;
+      position: relative;
+      margin-left: 110px;
+      transform: translateY(-50%);
+      top: 100px;
+      animation: flytwo 4s ease-in-out infinite;
+      img {
+        height: 300px;
+        width: 365px;
+      }
+    }
+  }
+  .journey {
+    height: 400px;
+  }
+  .journey__about h3 {
+    margin-top: 230px;
+    font-size: 40px;
+  }
+
+  .footer {
+    text-align: center;
+    margin: 50px 0;
+    p {
+      margin-top: 15px;
+    }
+  }
+  .header {
+    display: flex;
+    &__container {
+      height: 400px;
+      width: 100%;
+    }
+  }
 }
 
-@media only screen and (min-width: 576px) and (max-width: 767px) {
 
-}
-
-@media only screen and (max-width: 575px) {
-
-}
-@media only screen and (max-width: 478px) {
-
-}
