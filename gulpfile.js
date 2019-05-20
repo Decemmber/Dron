@@ -8,12 +8,6 @@ const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
 const browserSync = require('browser-sync').create();
 
-//Порядок подключения css файлов
-/*const cssFiles = [
-   './src/css/main.css',
-   './src/css/media.css'
-]*/
-
 const cssFiles = [
    './src/css/main.scss',
    './src/css/media.scss',

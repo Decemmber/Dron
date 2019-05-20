@@ -1,3 +1,5 @@
+/*animation scripts*/
+
 TweenMax.from(".header__logo", 1, {
   delay: 0.8,
   opacity: 0,
@@ -31,6 +33,7 @@ TweenMax.to('.about__left',1,{
   ease: Expo.easeInOut
 });
 
+/*scroll top script*/
 $(window).scroll(function () {
   if ($(this).scrollTop() != 0)
      $('#toTop').fadeIn();
